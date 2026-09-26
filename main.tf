@@ -15,15 +15,10 @@ provider "azurerm" {
   resource_provider_registrations = "none"
 }
 
-resource "azurerm_resource_group" "terraform_lab" {
-  name     = "terraform-lab-rg"
-  location = "Central India"
-}
-
 resource "azurerm_storage_account" "terraform_lab" {
   name                     = "subhaterraformlab2026"
-  resource_group_name      = azurerm_resource_group.terraform_lab.name
-  location                 = azurerm_resource_group.terraform_lab.location
+  resource_group_name      = "myserver_group"
+  location                 = "Central India"
   account_tier             = "Standard"
   account_replication_type = "LRS"
 }
