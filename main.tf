@@ -17,7 +17,7 @@ provider "azurerm" {
 
 resource "azurerm_storage_account" "terraform_lab" {
   name                     = "subhaterraformlab2026"
-  resource_group_name      = "myserver_group"
+  resource_group_name      = "SubhaVM_group"
   location                 = "Central India"
   account_tier             = "Standard"
   account_replication_type = "LRS"
