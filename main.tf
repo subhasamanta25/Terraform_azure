@@ -16,7 +16,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_storage_account" "terraform_lab" {
-  name                     = "subhadevopsb2026"
+  name                     = "subhadevops2026"
   resource_group_name      = "SubhaVM_group"
   location                 = "Central India"
   account_tier             = "Standard"
