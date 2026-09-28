@@ -1,5 +1,5 @@
 storage_account_name = "subhadevopsprod2026"
-location = "Central India"
+location = "Centralindia"
 
 tags = {
   Environment = "prod"
