@@ -11,20 +11,18 @@ terraform {
 
 provider "azurerm" {
   features {}
+
   resource_provider_registrations = "none"
 }
 
-resource "azurerm_resource_group" "main" {
-  name     = "terraform-lab-rg"
-  location = var.location
-
-  tags = var.tags
+data "azurerm_resource_group" "existing" {
+  name = "SubhaVM_group"
 }
 
 resource "azurerm_storage_account" "main" {
   name                     = var.storage_account_name
-  resource_group_name      = azurerm_resource_group.main.name
-  location                 = var.location
+  resource_group_name      = data.azurerm_resource_group.existing.name
+  location                 = data.azurerm_resource_group.existing.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
 
