@@ -1,12 +1,12 @@
 variable "storage_account_name" {
-    type = string
+  type = string
 }
 
 variable "location" {
-    type = string
-    default = "Central India"
+  type    = string
+  default = "Central India"
 }
 
-Variable "type" {
-    type = map(string)
+variable "tags" {
+  type = map(string)
 }
